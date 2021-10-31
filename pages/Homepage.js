@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, StyleSheet, Text, Image, useWindowDimensions } from "react-native";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Shoes from "../components/Shoes"
 import Shoebanner from "../images/Shoebanner.jpg";
 
 
@@ -17,6 +18,9 @@ export default function Homepage() {
       <Header />
       <Image style={bannerStyle} source={Shoebanner} />
       <Text style={styles.h1}>Shop Our Collection!</Text>
+      {currentFilter.type ? (
+              <Shoes currentFilter={currentFilter} setResultsNum={setResultsNum}/>
+          ) : null}
       <Footer />
     </View>
   );
