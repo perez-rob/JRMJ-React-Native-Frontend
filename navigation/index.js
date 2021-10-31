@@ -16,7 +16,8 @@ export default function Navigation() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerTitle: (props) => <Header {...props} /> }}>
+      <Stack.Navigator screenOptions={{
+      headerShown: false }}>
         <Stack.Screen name="Home" component={Homepage}/>
         <Stack.Screen name="Explore" component={Explore}/>
         <Stack.Screen name="Login" component={Login}/>
@@ -30,7 +31,7 @@ export default function Navigation() {
 };
 
 const styles = StyleSheet.create({
-  view: {
+  headerStyle: {
     flex: 1,
     flexDirection: "row",
     alignItems: "center",

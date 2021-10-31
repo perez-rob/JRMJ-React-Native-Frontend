@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 
 
 export default function Header() {
-  const headerStyle = {...styles.header, width: useWindowDimensions().width};
+  const headerStyle = {...styles.header, width: useWindowDimensions().width, height: 0.3*useWindowDimensions().height};
   const navigation = useNavigation();
 
   return(
@@ -20,12 +20,10 @@ export default function Header() {
 
 const styles = StyleSheet.create({
   header: {
-    flex: 1,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     backgroundColor: "black",
-    
     
   },
   textName: {
